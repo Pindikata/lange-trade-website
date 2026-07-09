@@ -1,6 +1,6 @@
 # Lange International Trade Services Website
 
-This is a simple static website prepared for GitHub Pages.
+Premium GitHub Pages website for Lange International Trade Services.
 
 ## Files
 
@@ -10,21 +10,20 @@ This is a simple static website prepared for GitHub Pages.
 - `images/logo.png` - company logo
 - `images/favicon.png` - browser tab icon
 
-## How to publish on GitHub Pages
+## Upload instructions
 
-1. Create a GitHub account or log in.
-2. Create a new repository named `lange-trade-website`.
-3. Upload `index.html`, `style.css`, and `script.js`.
-4. Go to repository `Settings`.
-5. Click `Pages`.
-6. Under `Build and deployment`, choose:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-7. Click Save.
-8. GitHub will give you a free link similar to:
-   `https://yourusername.github.io/lange-trade-website/`
+Upload all files and the `images` folder directly into the GitHub repository root.
 
-## Later
+Required final structure:
 
-When ready, buy a domain and connect it to the same GitHub Pages website.
+```text
+index.html
+style.css
+script.js
+README.md
+images/
+  logo.png
+  favicon.png
+```
+
+After uploading, commit changes and wait for GitHub Pages to redeploy.
