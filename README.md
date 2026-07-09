@@ -7,6 +7,8 @@ This is a simple static website prepared for GitHub Pages.
 - `index.html` - main website page
 - `style.css` - website design
 - `script.js` - mobile menu interaction
+- `images/logo.png` - company logo
+- `images/favicon.png` - browser tab icon
 
 ## How to publish on GitHub Pages
 
