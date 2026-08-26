@@ -1,6 +1,6 @@
 const menu=document.querySelector(".menu");const nav=document.getElementById("navigation");if(menu&&nav){menu.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));menu.setAttribute("aria-label",open?"Close navigation":"Open navigation")});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}));document.addEventListener("keydown",e=>{if(e.key==="Escape"){nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}})}const year=document.getElementById("year");if(year)year.textContent=new Date().getFullYear();
-const SUPABASE_URL="YOUR_SUPABASE_URL";
-const SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_URL="https://jekreqfctldkiugeenza.supabase.co";
+const SUPABASE_ANON_KEY="sb_publishable_YZcjVmmUyfBGJTfrF3NioQ_okw0MyHW";
 function enquiryRef(){const d=new Date();return `LT-${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}-${Math.floor(1000+Math.random()*9000)}`;}
 async function loadSupabase(){if(window.supabase)return window.supabase;await new Promise((r,j)=>{const s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";s.onload=r;s.onerror=j;document.head.appendChild(s)});return window.supabase}
 const tradeForm=document.getElementById("tradeEnquiryForm"),formStatus=document.getElementById("formStatus");
