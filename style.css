@@ -17,3 +17,293 @@
 @media(max-width:860px){.fx-section{padding:66px 18px}.fx-heading{grid-template-columns:1fr;gap:18px}.fx-controls{grid-template-columns:1fr 1fr}.fx-refresh{grid-column:1/-1;justify-content:center}.fx-rate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.fx-controls{grid-template-columns:1fr}.fx-refresh{grid-column:auto}.fx-rate-grid{grid-template-columns:1fr}.fx-status-row{align-items:flex-start;flex-direction:column;padding-top:12px;padding-bottom:12px}.fx-heading>p{font-size:16px}}
 
+
+/* ============================================================
+LANGE REGIONAL CONTACT HUB
+============================================================= */
+
+.contact{
+  background:#0756b8;
+  color:#fff;
+  padding:96px 0;
+}
+
+.contact-heading{
+  max-width:860px;
+  margin-bottom:42px;
+}
+
+.contact-heading h2{
+  margin:0;
+  color:#fff;
+  font-size:clamp(44px,4.8vw,66px);
+  line-height:1.04;
+  letter-spacing:-.045em;
+}
+
+.contact-heading>p:last-child{
+  max-width:760px;
+  margin:20px 0 0;
+  color:#dce9f8;
+  font-size:18px;
+  line-height:1.7;
+}
+
+.regional-contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.regional-contact-card{
+  background:#fff;
+  color:#0b203b;
+  border-radius:12px;
+  padding:30px;
+  box-shadow:0 18px 45px rgba(5,35,75,.12);
+}
+
+.regional-contact-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  padding-bottom:18px;
+  border-bottom:1px solid #e1e8f0;
+}
+
+.region-label{
+  color:#0756b8;
+  font-size:12px;
+  font-weight:850;
+  letter-spacing:.1em;
+}
+
+.region-status{
+  padding:6px 9px;
+  border-radius:999px;
+  background:#eef5fc;
+  color:#526b85;
+  font-size:11px;
+  font-weight:700;
+}
+
+.regional-contact-card h3{
+  margin:25px 0 10px;
+  color:#0b203b;
+  font-size:27px;
+  line-height:1.22;
+  letter-spacing:-.025em;
+}
+
+.regional-contact-description{
+  min-height:84px;
+  margin:0;
+  color:#5a6d82;
+  font-size:15px;
+  line-height:1.65;
+}
+
+.regional-actions{
+  display:grid;
+  gap:10px;
+  margin-top:26px;
+}
+
+.regional-action{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 16px;
+  border:1px solid #dce5ef;
+  border-radius:7px;
+  background:#f7f9fc;
+  color:#0b203b;
+  text-decoration:none;
+  transition:.18s ease;
+}
+
+.regional-action:hover{
+  border-color:#9fb9d8;
+  transform:translateY(-1px);
+}
+
+.regional-action img{
+  width:21px;
+  height:21px;
+  object-fit:contain;
+}
+
+.regional-action span{
+  display:flex;
+  flex-direction:column;
+}
+
+.regional-action small{
+  color:#75879a;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.regional-action strong{
+  margin-top:2px;
+  font-size:15px;
+}
+
+.whatsapp-action{
+  background:#159447;
+  border-color:#159447;
+  color:#fff;
+}
+
+.whatsapp-action:hover{
+  background:#117c3b;
+  border-color:#117c3b;
+}
+
+.whatsapp-action img{
+  filter:brightness(0) invert(1);
+}
+
+.whatsapp-action small{
+  color:#dff5e7;
+}
+
+.contact-email-row{
+  margin-top:18px;
+}
+
+.contact-email-card{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:16px;
+  background:#fff;
+  color:#0b203b;
+  text-decoration:none;
+  border-radius:10px;
+  padding:20px 24px;
+}
+
+.contact-email-card img{
+  width:23px;
+  height:23px;
+}
+
+.contact-email-card span:not(.contact-arrow){
+  display:flex;
+  flex-direction:column;
+}
+
+.contact-email-card small{
+  color:#6c7a8d;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.contact-email-card strong{
+  margin-top:3px;
+  font-size:16px;
+}
+
+.contact-arrow{
+  color:#0756b8;
+  font-size:24px;
+  font-weight:700;
+}
+
+.contact-social-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin-top:28px;
+  padding-top:26px;
+  border-top:1px solid rgba(255,255,255,.24);
+}
+
+.contact-social-row>span{
+  font-size:13px;
+  font-weight:750;
+  color:#dce9f8;
+}
+
+.contact-social-links{
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+}
+
+.contact-social-links a{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:6px;
+  background:#fff;
+  color:#0b203b;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:750;
+}
+
+.contact-social-links img{
+  width:16px;
+  height:16px;
+}
+
+@media(max-width:900px){
+  .regional-contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .regional-contact-description{
+    min-height:auto;
+  }
+}
+
+@media(max-width:650px){
+  .contact{
+    padding:70px 0;
+  }
+
+  .contact-heading h2{
+    font-size:40px;
+  }
+
+  .regional-contact-card{
+    padding:22px;
+  }
+
+  .regional-contact-top{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .contact-email-card{
+    grid-template-columns:auto 1fr;
+  }
+
+  .contact-arrow{
+    display:none;
+  }
+
+  .contact-social-row{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .contact-social-links{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .contact-social-links a{
+    justify-content:center;
+  }
+}
+
