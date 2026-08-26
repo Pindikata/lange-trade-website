@@ -48,7 +48,7 @@
           coordinate quality, and prepare goods for international shipment to Pacific markets.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#contact">Start a Trade Enquiry</a>
+          <a class="button primary" href="#enquiry">Start a Trade Enquiry</a>
           <a class="button secondary" href="assets/Lange_International_Trade_Services_Company_Profile_2026.pdf" target="_blank" rel="noopener">Company Profile</a>
         </div>
       </div>
@@ -209,7 +209,78 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <section class="section enquiry-section" id="enquiry">
+<div class="container enquiry-grid">
+<div class="enquiry-intro">
+<p class="kicker">TRADE ENQUIRY</p>
+<h2>Tell us what you need. We’ll structure the next step.</h2>
+<p>Submit your product or sourcing requirement with the commercial details we need to assess the request properly. Every submission receives a reference number for follow-up.</p>
+<div class="enquiry-guidance">
+<div><strong>Product requirement</strong><span>Name, specification, model or reference image.</span></div>
+<div><strong>Commercial requirement</strong><span>Quantity, target price, customization and timeline.</span></div>
+<div><strong>Destination</strong><span>Country, city/port and expected delivery point.</span></div>
+</div>
+</div>
+
+<form class="trade-form" id="tradeEnquiryForm" novalidate>
+<div class="form-status" id="formStatus" aria-live="polite"></div>
+
+<div class="form-row two">
+<label><span>Full name *</span><input type="text" name="full_name" autocomplete="name" required></label>
+<label><span>Company / Business</span><input type="text" name="company" autocomplete="organization"></label>
+</div>
+
+<div class="form-row two">
+<label><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
+<label><span>Phone / WhatsApp *</span><input type="tel" name="phone" autocomplete="tel" required></label>
+</div>
+
+<div class="form-row two">
+<label><span>Country / Market *</span>
+<select name="country" required>
+<option value="">Select market</option>
+<option>Papua New Guinea</option>
+<option>Solomon Islands</option>
+<option>China</option>
+<option>Other Pacific Market</option>
+<option>Other</option>
+</select></label>
+<label><span>Destination city / port *</span><input type="text" name="destination" placeholder="e.g. Port Moresby / Lae" required></label>
+</div>
+
+<div class="form-row">
+<label><span>Product / Requirement *</span><input type="text" name="product" placeholder="What do you need to source or purchase?" required></label>
+</div>
+
+<div class="form-row two">
+<label><span>Quantity *</span><input type="text" name="quantity" placeholder="e.g. 5,000 units" required></label>
+<label><span>Target timeline</span><input type="text" name="timeline" placeholder="e.g. Required within 8 weeks"></label>
+</div>
+
+<div class="form-row two">
+<label><span>Target budget / price</span><input type="text" name="budget" placeholder="Optional"></label>
+<label><span>Preferred trade term</span>
+<select name="incoterm">
+<option value="">Not sure / advise me</option><option>EXW</option><option>FOB</option><option>CIF</option><option>CFR</option><option>DAP</option><option>DDP</option><option>Other</option>
+</select></label>
+</div>
+
+<div class="form-row">
+<label><span>Specifications / Additional details *</span><textarea name="details" rows="6" placeholder="Material, dimensions, packaging, customization, standards, or any other requirement." required></textarea></label>
+</div>
+
+<div class="form-row">
+<label class="file-field"><span>Reference file or image</span><input type="file" name="attachment" accept=".pdf,.png,.jpg,.jpeg,.webp,.doc,.docx,.xls,.xlsx"><small>Optional. Maximum 10 MB.</small></label>
+</div>
+
+<label class="consent"><input type="checkbox" name="consent" required><span>I confirm that the information provided may be used by Lange International Trade Services to respond to this enquiry. *</span></label>
+
+<button class="submit-button" type="submit"><span>Submit Trade Enquiry</span><span aria-hidden="true">→</span></button>
+<p class="form-note">Prefer direct contact? <a href="https://wa.me/8619568720514" target="_blank" rel="noopener">WhatsApp +86 195 6872 0514</a> or <a href="mailto:langeint.trade@gmail.com">email us</a>.</p>
+</form>
+</div>
+</section>
+<section class="contact" id="contact">
     <div class="container contact-grid">
       <div>
         <p class="kicker light">START A CONVERSATION</p>
