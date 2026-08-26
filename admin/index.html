@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#0b203b">
+  <title>Lange Trade Operations</title>
+  <link rel="icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="../" class="admin-brand" aria-label="Return to Lange website">
+        <img src="../images/logo.png" alt="">
+        <span>
+          <strong>Lange Trade Operations</strong>
+          <small>Private Administration</small>
+        </span>
+      </a>
+
+      <div class="topbar-actions">
+        <span id="signedInAs" class="signed-in hidden"></span>
+        <button id="signOutButton" class="secondary-button hidden" type="button">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="loginView" class="login-view">
+      <div class="login-shell">
+        <div class="login-copy">
+          <p class="eyebrow">SECURE ACCESS</p>
+          <h1>Lange Trade Operations</h1>
+          <p>
+            Private workspace for managing customer enquiries, attachments,
+            follow-up activity and commercial progress.
+          </p>
+
+          <div class="security-note">
+            <strong>Authorized personnel only</strong>
+            <span>Access is controlled by Supabase Auth and database-level RLS policies.</span>
+          </div>
+        </div>
+
+        <form id="loginForm" class="login-card" novalidate>
+          <div>
+            <p class="eyebrow">ADMIN SIGN IN</p>
+            <h2>Welcome back</h2>
+          </div>
+
+          <div id="loginMessage" class="message hidden" aria-live="polite"></div>
+
+          <label>
+            <span>Email address</span>
+            <input id="loginEmail" type="email" autocomplete="username" required>
+          </label>
+
+          <label>
+            <span>Password</span>
+            <input id="loginPassword" type="password" autocomplete="current-password" required>
+          </label>
+
+          <button id="loginButton" class="primary-button" type="submit">
+            <span>Sign in securely</span>
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <p class="login-footnote">
+            This portal is not part of the public customer website.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section id="dashboardView" class="dashboard hidden">
+      <div class="dashboard-inner">
+        <section class="page-heading">
+          <div>
+            <p class="eyebrow">TRADE OPERATIONS</p>
+            <h1>Enquiry Management</h1>
+            <p>Review, prioritize and progress customer opportunities from one workspace.</p>
+          </div>
+          <button id="refreshButton" class="secondary-button" type="button">Refresh</button>
+        </section>
+
+        <section class="metric-grid" aria-label="Enquiry summary">
+          <article class="metric-card">
+            <span>Total enquiries</span>
+            <strong id="metricTotal">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>New</span>
+            <strong id="metricNew">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Active pipeline</span>
+            <strong id="metricActive">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Quoted</span>
+            <strong id="metricQuoted">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Won</span>
+            <strong id="metricWon">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Follow-ups due</span>
+            <strong id="metricDue">0</strong>
+          </article>
+        </section>
+
+        <section class="workspace">
+          <div class="workspace-toolbar">
+            <div class="search-field">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m2.3-5.2a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+              <input id="searchInput" type="search" placeholder="Search reference, customer, product, email, destination…">
+            </div>
+
+            <select id="statusFilter" aria-label="Filter by status">
+              <option value="">All statuses</option>
+              <option>New</option>
+              <option>In Review</option>
+              <option>Qualified</option>
+              <option>Sourcing</option>
+              <option>Quoted</option>
+              <option>Negotiating</option>
+              <option>Won</option>
+              <option>Lost</option>
+              <option>Order Confirmed</option>
+              <option>In Progress</option>
+              <option>Shipped</option>
+              <option>Delivered</option>
+              <option>Closed</option>
+            </select>
+
+            <select id="priorityFilter" aria-label="Filter by priority">
+              <option value="">All priorities</option>
+              <option>Normal</option>
+              <option>High</option>
+              <option>Urgent</option>
+              <option>Low</option>
+            </select>
+          </div>
+
+          <div id="loadingState" class="loading-state">Loading enquiries…</div>
+          <div id="emptyState" class="empty-state hidden">
+            <strong>No enquiries match this view.</strong>
+            <span>Adjust the search or filters and try again.</span>
+          </div>
+
+          <div id="enquiryTableWrap" class="table-wrap hidden">
+            <table class="enquiry-table">
+              <thead>
+                <tr>
+                  <th>Reference</th>
+                  <th>Customer</th>
+                  <th>Requirement</th>
+                  <th>Market</th>
+                  <th>Status</th>
+                  <th>Priority</th>
+                  <th>Received</th>
+                </tr>
+              </thead>
+              <tbody id="enquiryRows"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="drawerBackdrop" class="drawer-backdrop hidden"></div>
+
+  <aside id="detailDrawer" class="detail-drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <p id="drawerReference" class="eyebrow">ENQUIRY</p>
+        <h2 id="drawerTitle">Enquiry details</h2>
+      </div>
+      <button id="closeDrawerButton" class="icon-button" type="button" aria-label="Close enquiry details">×</button>
+    </div>
+
+    <div id="drawerContent" class="drawer-content"></div>
+  </aside>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
