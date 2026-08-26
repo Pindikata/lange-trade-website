@@ -1,3 +1,18 @@
-# Lange International Trade Services Website
+# Lange International Trade Services — Premium Corporate Website
 
-Upload all files and folders to the root of the GitHub repository. GitHub Pages should deploy from `main` / `(root)`.
+This static site is ready for GitHub Pages.
+
+Upload the contents of this folder to the root of the existing GitHub repository.
+
+Required structure:
+- index.html
+- style.css
+- script.js
+- 404.html
+- images/
+- assets/
+
+GitHub Pages:
+- Source: Deploy from a branch
+- Branch: main
+- Folder: /(root)
