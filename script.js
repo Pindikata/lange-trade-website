@@ -45,3 +45,4 @@ if(tradeForm&&formStatus){tradeForm.addEventListener("submit",async e=>{e.preven
   }
   amountInput.addEventListener("input",render);baseSelect.addEventListener("change",render);refreshButton.addEventListener("click",load);load();
 })();
+// Trigger GitHub Pages deployment
